@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Ledger — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="An offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: official names, descriptions and grades, cited guides, a roadmap to the platinum, missable flags, and saved progress.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; works offline</p>
+    <h1>Leonida Ledger</h1>
+    <p class="tagline">The complete trophy guide &amp; tracker for GTA VI — all 55 trophies, every guide cited, progress saved in your browser.</p>
+    <div class="trophy-counts" id="trophyCounts" aria-label="Trophy counts by grade"></div>
+    <div class="progress-wrap">
+      <div class="progress-bar" role="progressbar" aria-label="Trophies earned" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progressBar"><span id="progressFill"></span></div>
+      <p class="progress-text" id="progressText">0 of 55 earned — 0%</p>
+    </div>
+    <nav class="page-nav" aria-label="Sections">
+      <a href="#checklist">Checklist</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#missables">Missables</a>
+      <a href="#sources">Sources</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="checklist" class="section">
+    <h2>Trophy checklist</h2>
+    <p class="section-intro">Tick a trophy when you earn it — your progress is saved in this browser. Click any trophy to read its guide and sources. Story trophies stay hidden while the spoiler setting is on and you have not earned them yet.</p>
+
+    <div class="toolbar" role="search">
+      <label class="search-label">Search
+        <input type="search" id="searchInput" placeholder="Search a trophy, mission or keyword…" autocomplete="off">
+      </label>
+      <label class="grade-label">Grade
+        <select id="gradeFilter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="spoiler-label"><input type="checkbox" id="spoilerToggle" checked> Hide story spoilers</label>
+    </div>
+
+    <div class="kind-chips" id="kindChips" role="group" aria-label="Filter by kind"></div>
+
+    <div class="toolbar-actions">
+      <button type="button" id="exportBtn">Export progress</button>
+      <label class="import-label">Import progress <input type="file" id="importInput" accept="application/json,.json"></label>
+      <button type="button" id="resetBtn" class="quiet">Reset progress</button>
+      <span class="list-count" id="listCount"></span>
+    </div>
+
+    <div class="tracker-grid">
+      <ul class="trophy-list" id="trophyList" aria-live="polite"></ul>
+      <aside class="detail-panel" id="detailPanel" aria-label="Selected trophy guide"></aside>
+    </div>
+  </section>
+
+  <section id="roadmap" class="section">
+    <h2>Roadmap to the platinum</h2>
+    <p class="section-intro">Built from the official descriptions. PowerPyx, which played the finished game, rates the set 4 out of 10 and estimates about 200 hours in a single playthrough — there is no mission replay, no New Game+, no difficulty setting and no online trophy. Cheats disable trophies and saving, so keep them off.</p>
+    <ol class="roadmap-stages" id="roadmapStages"></ol>
+  </section>
+
+  <section id="missables" class="section">
+    <h2>Missable trophies</h2>
+    <p class="section-intro">Only one trophy is flagged as potentially missable. Everything else can be finished in free-roam after the story.</p>
+    <div id="missableList"></div>
+    <div class="save-advice">
+      <h3>Save advice</h3>
+      <p>There is no mission replay, so keep a manual save at the start and end of every chapter — the game offers 15 manual save slots plus one autosave. Optional missions with black icons and pink letters can disappear after a while, but PowerPyx notes they do not matter for trophies: there are far more than the 100 the checklist asks for. Quest givers tied to trophies all return after the story.</p>
+    </div>
+  </section>
+
+  <section id="sources" class="section">
+    <h2>Sources &amp; honesty note</h2>
+    <p class="section-intro">Every trophy guide in this app names its sources. The game launched on 19 November 2026, so guides are days old: where a method is not yet verified anywhere, the guide says so instead of guessing. Guide text is this guide's own words — sources are cited, never copied. Official trophy names and descriptions are shown as PlayStation publishes them.</p>
+    <ul class="source-list" id="sourceList"></ul>
+    <p class="fine-print">Leonida Ledger is an unofficial fan guide. It uses no Rockstar Games logo, artwork, box art or screenshot of the game. Grand Theft Auto and GTA are trademarks of Take-Two Interactive. Built by an AI agent for make.fun's “Build the best GTA 6 trophy guide” bounty.</p>
+  </section>
+</main>
+
+<footer class="page-footer">
+  <p>Leonida Ledger — offline GTA VI trophy guide &amp; tracker. Progress lives in your browser (localStorage) and never leaves it unless you export it.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
